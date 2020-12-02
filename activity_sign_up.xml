@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp">
+
+
+
+    <EditText
+        android:id="@+id/surnameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Surname"
+        android:layout_above="@+id/emailText"
+        android:layout_centerHorizontal="true"
+        />
+    <EditText
+        android:id="@+id/nameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/surnameText"
+        />
+
+    <EditText
+        android:id="@+id/emailText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="E mail"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        />
+    <EditText
+        android:id="@+id/passwordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Password"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/emailText"
+        />
+    <Button
+        android:id="@+id/registrationButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registration"
+        android:layout_above="@+id/teacherCheckBox"
+        android:layout_centerHorizontal="true"
+        android:layout_alignRight="@+id/nameText"
+        />
+
+
+    <CheckBox
+        android:id="@+id/studentCheckBox"
+        android:layout_width="88dp"
+        android:layout_height="47dp"
+        android:layout_below="@+id/passwordText"
+        android:layout_alignLeft="@+id/nameText"
+        android:layout_centerHorizontal="true"
+        android:text="Student" />
+
+    <CheckBox
+        android:id="@+id/teacherCheckBox"
+        android:layout_width="88dp"
+        android:layout_height="46dp"
+        android:layout_below="@+id/studentCheckBox"
+        android:layout_alignLeft="@+id/nameText"
+        android:layout_centerHorizontal="true"
+        android:text="Teacher" />
+
+
+
+
+</RelativeLayout>

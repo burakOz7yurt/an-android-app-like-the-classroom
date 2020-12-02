@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeworkShowActivity">
+
+
+    <include
+        android:id="@+id/homeworkShowLayout"
+        layout="@layout/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </include>
+    <TextView
+        android:id="@+id/homeworkNameForShow"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_below="@+id/homeworkShowLayout"
+        android:text=" "
+        android:visibility="visible"
+        />
+    <TextView
+        android:id="@+id/homeworkDueDateForShow"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_below="@+id/homeworkNameForShow"
+        android:text=" "
+        android:visibility="visible"
+        />
+
+    <LinearLayout
+        android:id="@+id/updateLayoutForHomework"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/homeworkShowLayout"
+        android:layout_marginTop="-2dp"
+
+        android:layout_toEndOf="@id/homeworkDueDateForShow"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/homeworkNameForUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/updateLayoutForHomework"
+            android:layout_marginTop="-4dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Homework Name" />
+
+        <EditText
+            android:id="@+id/homeworkDueDateForUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/homeworkNameForUpdate"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Homework Due Date" />
+
+        <Button
+            android:id="@+id/btnUpdateForHomework"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UpdateForHomework" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/updateLayoutForHomeworkData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/homeworkDueDateForShow"
+        android:layout_marginTop="-2dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/homeworkDataForUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="195dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine" />
+
+
+
+        <Button
+            android:id="@+id/btnUpdateForHomeworkData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/homeworkDataForUpdate"
+            android:text="Update" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutForDoneHomeworkData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/updateLayoutForHomeworkData"
+        android:layout_marginTop="-2dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/doneHomeworkData"
+            android:layout_width="match_parent"
+            android:layout_height="157dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine" />
+
+
+
+        <Button
+            android:id="@+id/btnDoneHomeworkData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/homeworkDataForUpdate"
+            android:text="ADD" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/homeworkDataForShow"
+        android:layout_width="match_parent"
+        android:layout_height="191dp"
+        android:layout_below="@+id/homeworkDueDateForShow"
+
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/doneHomeworkDataForShow"
+        android:layout_width="394dp"
+        android:layout_height="155dp"
+        android:layout_below="@+id/updateLayoutForHomeworkData"
+
+        android:text="TextView" />
+    <Button
+        android:id="@+id/btnOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/doneHomeworkDataForShow"
+        android:text="OK" />
+    <ListView
+        android:id="@+id/listViewDoneHomeworks"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/updateLayoutForHomeworkData"
+        />
+
+
+</RelativeLayout>

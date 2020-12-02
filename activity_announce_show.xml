@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnnounceShowActivity">
+
+    <include
+        android:id="@+id/announceShowLayout"
+        layout="@layout/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </include>
+
+    <TextView
+        android:id="@+id/announceNameForShow"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_below="@+id/announceShowLayout"
+        android:text=" "
+        android:visibility="visible"
+        />
+    <TextView
+        android:id="@+id/announceEmailForShow"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_below="@+id/announceNameForShow"
+        android:text=" "
+        android:visibility="visible"
+        />
+    <TextView
+        android:id="@+id/announceDataForShow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/announceEmailForShow"
+        android:text="TextView" />
+
+    <LinearLayout
+        android:id="@+id/layoutAnnounceData"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="-2dp"
+        android:layout_below="@+id/announceShowLayout"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/announceForUpdateData"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine" />
+
+
+        <Button
+            android:id="@+id/btnAnnounce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/announceForUpdateData"
+            android:text="Update" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layoutAnnounceName"
+        android:layout_width="match_parent"
+        android:layout_height="733dp"
+        android:layout_marginTop="-2dp"
+        android:layout_below="@+id/announceEmailForShow"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/announceForUpdateName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine" />
+
+
+        <Button
+            android:id="@+id/btnAnnounceName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/announceForUpdateData"
+            android:text="Update" />
+
+    </LinearLayout>
+
+</RelativeLayout>

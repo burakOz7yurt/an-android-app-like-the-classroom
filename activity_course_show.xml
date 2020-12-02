@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CourseShowActivity">
+
+    <include
+    android:id="@+id/courseShowLayout"
+    layout="@layout/app_bar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+</include>
+    <TextView
+        android:id="@+id/courseNameForShow"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_below="@+id/courseShowLayout"
+        android:text=" "
+        android:visibility="visible"
+         />
+    <TextView
+        android:id="@+id/courseTermForShow"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_below="@+id/courseNameForShow"
+        android:text=" "
+        android:visibility="visible"
+         />
+
+    <LinearLayout
+        android:id="@+id/updateLayout"
+        android:layout_width="191dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/courseShowLayout"
+        android:layout_marginTop="-2dp"
+
+        android:layout_toEndOf="@id/courseNameForShow"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/courseNameForUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/updateLayout"
+            android:layout_marginTop="-4dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Course Name" />
+
+        <EditText
+            android:id="@+id/courseTermForUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/courseNameForUpdate"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Course Term" />
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="114dp"
+            android:layout_height="32dp"
+            android:text="Update" />
+    </LinearLayout>
+
+
+        <ListView
+            android:id="@+id/listViewCourseShow"
+            android:layout_width="200dp"
+            android:layout_below="@+id/updateLayout"
+            android:layout_height="match_parent" />
+
+
+    <ListView
+        android:id="@+id/listViewPostShow"
+        android:layout_width="200dp"
+        android:layout_below="@+id/updateLayout"
+        android:layout_toRightOf="@+id/listViewCourseShow"
+        android:layout_height="match_parent" />
+
+
+</RelativeLayout>
